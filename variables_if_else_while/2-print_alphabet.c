@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Afficher l'alphabet 
+ * main - Afficher l'alphabet
  *
  * Return: Always 0
  */
@@ -16,4 +16,4 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
-	}	
+	}
