@@ -59,13 +59,11 @@ This causes an invalid write through a NULL pointer.
 
 ## 5. AI Review
 
-The AI initially suggested that the value read after free in the aliasing example would be unpredictable.
+The AI explanation correctly stated that the value read after free is unpredictable.
 
-This is correct as a general explanation of undefined behavior, but one execution displayed the old value 22.
+In our execution, the program displayed 1404180482. This value does not prove that the memory was overwritten or that the access is valid.
 
-Seeing 22 does not mean the access is valid. Valgrind still reports an invalid read because the memory had already been freed.
-
-The important point is to verify the memory lifetime, not just the displayed value.
+Valgrind reports an invalid read because the memory had already been freed. The result of accessing it is undefined and cannot be relied on.
 
 ## Conclusion
 
